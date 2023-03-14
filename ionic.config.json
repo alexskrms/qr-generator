@@ -1,0 +1,7 @@
+{
+  "name": "qr-generator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
