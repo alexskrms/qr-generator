@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'qr-generator',
+  appId: 'com.reteed.qrgenerator',
+  appName: 'Qr Generator',
   webDir: 'www',
   bundledWebRuntime: false
 };

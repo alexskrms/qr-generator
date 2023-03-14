@@ -1,2 +1,33 @@
 <ion-content>
+    <ion-grid fixed class="ion-padding center-both">
+        <ion-row>
+            <ion-col size="12" class="ion-text-center">
+                <qrcode *ngIf="qrData.length > 0" (qrCodeURL)="onQrDataChange($event)" [qrdata]="qrData" [width]="size"
+                    [errorCorrectionLevel]="'M'"></qrcode>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 15px;">
+            <ion-col size="12" class="ion-text-center">
+                <ion-item fill="outline">
+                    <ion-label position="floating">{{ "writehere" | translate }}</ion-label>
+                    <ion-input type="text" [(ngModel)]="qrData"></ion-input>
+                </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 15px;">
+            <ion-col size="4"></ion-col>
+            <ion-col size="4" *ngIf="qrData.length > 0">
+                <ion-item fill="outline">
+                    <ion-label position="floating">{{ "size" | translate }} ({{ "pixels" | translate }})</ion-label>
+                    <ion-input [placeholder]="'zero' | translate" [(ngModel)]="size"></ion-input>
+                </ion-item>
+            </ion-col>
+            <ion-col size="4"></ion-col>
+        </ion-row>
+        <ion-row style="margin-top: 25px;">
+            <ion-col size="12" *ngIf="url != '' && qrData.length > 0" class="ion-text-center">
+                <a [href]="url" download="qrcode"><ion-button color="primary" shape="round"><ion-label><b>{{ "download" | translate }}</b></ion-label></ion-button></a>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
