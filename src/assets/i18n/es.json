@@ -3,5 +3,6 @@
     "pixels": "Píxeles",
     "download": "Descargar",
     "zero": "0",
-    "writehere": "Escribe aquí para generar el QR"
+    "writehere": "Escribe aquí para generar el QR",
+    "chooseformat": "Escoge un formato"
 }
