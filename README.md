@@ -1,4 +1,4 @@
 # qr-generator
-A simple QR Generator app built with Ionic Angular
+A QR Generator web app built with Ionic Angular
 
 DEMO: https://qr.reteed.com
