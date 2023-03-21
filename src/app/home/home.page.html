@@ -1,9 +1,11 @@
 <ion-content>
-    <ion-grid fixed class="ion-padding center-both">
-        <ion-row>
+    <ion-grid fixed class="ion-padding">
+        <ion-row class="ion-padding">
             <ion-col size="12" class="ion-text-center">
-                <qrcode *ngIf="qrData.length > 0" (qrCodeURL)="onQrDataChange($event)" [qrdata]="qrData" [width]="size"
-                    [errorCorrectionLevel]="'M'" [elementType]="format"></qrcode>
+                <div>
+                    <qrcode *ngIf="qrData.length > 0" (qrCodeURL)="onQrDataChange($event)" [qrdata]="qrData"
+                        [width]="size" [errorCorrectionLevel]="'H'" [elementType]="format"></qrcode>
+                </div>
             </ion-col>
         </ion-row>
         <ion-row style="margin-top: 20px;">

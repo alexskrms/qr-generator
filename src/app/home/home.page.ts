@@ -12,7 +12,7 @@ export class HomePage {
   qrData: string = "";
   size: number = 256;
   url: SafeUrl = '';
-  format: QRCodeElementType = 'canvas';
+  format: QRCodeElementType = 'img';
 
   constructor() { }
 
