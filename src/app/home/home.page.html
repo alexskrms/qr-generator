@@ -10,18 +10,14 @@
         </ion-row>
         <ion-row style="margin-top: 20px;">
             <ion-col size="12" class="ion-text-center">
-                <ion-item fill="outline">
-                    <ion-label position="floating">{{ "writehere" | translate }}</ion-label>
-                    <ion-input type="text" [(ngModel)]="qrData"></ion-input>
-                </ion-item>
+                <ion-input [label]="'writehere' | translate" label-placement="floating" fill="outline"
+                    [placeholder]="'writehere' | translate" type="text" [(ngModel)]="qrData"></ion-input>
             </ion-col>
         </ion-row>
         <ion-row style="margin-top: 20px;">
             <ion-col size="12" *ngIf="qrData.length > 0">
-                <ion-item fill="outline">
-                    <ion-label position="floating">{{ "size" | translate }} ({{ "pixels" | translate }})</ion-label>
-                    <ion-input [placeholder]="'zero' | translate" [(ngModel)]="size"></ion-input>
-                </ion-item>
+                <ion-label>{{ "size" | translate }} ({{ "pixels" | translate }})</ion-label>
+                <ion-input label="" [placeholder]="'zero' | translate" type="text" [(ngModel)]="size"></ion-input>
             </ion-col>
         </ion-row>
         <ion-row style="margin-top: 20px;">
@@ -30,12 +26,10 @@
                     <ion-label>{{ "chooseformat" | translate }}</ion-label>
                     <ion-list style="border-radius: 10px; margin-top: 10px;">
                         <ion-item>
-                            <ion-label>PNG</ion-label>
-                            <ion-radio slot="end" value="canvas"></ion-radio>
+                            <ion-radio value="canvas" labelPlacement="start">PNG</ion-radio>
                         </ion-item>
                         <ion-item>
-                            <ion-label>SVG</ion-label>
-                            <ion-radio slot="end" value="svg"></ion-radio>
+                            <ion-radio value="svg" labelPlacement="start">SVG</ion-radio>
                         </ion-item>
                     </ion-list>
                 </ion-radio-group>
